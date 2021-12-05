@@ -166,6 +166,13 @@ var options = {
       chunks: ['popup'],
       cache: false,
     }),
+    // 调试用
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'pages', 'Popup', 'index.html'),
+      filename: 'index.html',
+      chunks: ['popup'],
+      cache: false,
+    }),
   ],
   infrastructureLogging: {
     level: 'info',
