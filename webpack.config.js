@@ -51,9 +51,29 @@ var options = {
   },
   module: {
     rules: [
+     
+      // {
+      //   // look for .css or .scss files
+      //   test: /\.(css|scss)$/,
+      //   // in the `src` directory
+      //   use: [
+      //     {
+      //       loader: 'style-loader',
+      //     },
+      //     {
+      //       loader: 'css-loader',
+      //     },
+      //     {
+      //       loader: 'sass-loader',
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //   ],
+      // },
       {
         // look for .css or .scss files
-        test: /\.(css|scss)$/,
+        test: /\.(css|less)$/,
         // in the `src` directory
         use: [
           {
@@ -63,7 +83,7 @@ var options = {
             loader: 'css-loader',
           },
           {
-            loader: 'sass-loader',
+            loader: 'less-loader',
             options: {
               sourceMap: true,
             },
@@ -163,13 +183,6 @@ var options = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'pages', 'Popup', 'index.html'),
       filename: 'popup.html',
-      chunks: ['popup'],
-      cache: false,
-    }),
-    // 调试用
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'pages', 'Popup', 'index.html'),
-      filename: 'index.html',
       chunks: ['popup'],
       cache: false,
     }),

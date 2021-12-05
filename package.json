@@ -9,8 +9,8 @@
   },
   "scripts": {
     "dev": "node utils/webserver.js",
-    "start": "node utils/webserver.js",
     "build": "node utils/build.js",
+    "start": "node utils/webserver.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
@@ -43,6 +43,8 @@
     "fs-extra": "^10.0.0",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.4.1",
     "sass-loader": "^12.2.0",
