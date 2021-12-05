@@ -32,6 +32,11 @@ if (fileSystem.existsSync(secretsPath)) {
   alias['secrets'] = secretsPath;
 }
 
+const modifyVars = {
+  'primary-color': '#2563eb',
+}
+
+
 var options = {
   mode: process.env.NODE_ENV || 'development',
   entry: {
@@ -51,7 +56,7 @@ var options = {
   },
   module: {
     rules: [
-     
+
       // {
       //   // look for .css or .scss files
       //   test: /\.(css|scss)$/,
@@ -85,8 +90,11 @@ var options = {
           {
             loader: 'less-loader',
             options: {
-              sourceMap: true,
-            },
+              lessOptions: {
+                javascriptEnabled: true,
+                modifyVars
+              }
+            }
           },
         ],
       },
